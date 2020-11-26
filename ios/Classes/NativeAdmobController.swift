@@ -96,6 +96,9 @@ class NativeAdmobController: NSObject {
             extras.additionalParameters = ["npa": "1"]
             request.register(extras)
         }
+
+        request.keywords = ["instagram", "photo editing"]
+
         adLoader?.load(request)
     }
     

@@ -86,6 +86,10 @@ class NativeAdmobController(
   private fun loadAd(numberAds: Int?) {
     channel.invokeMethod(LoadState.loading.toString(), null)
     val requestBuilder: AdRequest.Builder = AdRequest.Builder()
+
+    requestBuilder.addKeyword("instagram")
+    requestBuilder.addKeyword("photo editing")
+
     if(nonPersonalizedAds){
       val extras = Bundle().apply {
         putString("npa", "1")
